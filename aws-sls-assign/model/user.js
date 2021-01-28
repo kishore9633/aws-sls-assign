@@ -1,7 +1,4 @@
 const mongoose = require('mongoose');
-
-
-// import mongoose from 'mongoose';
 const {
     Schema
 } = mongoose;
@@ -11,14 +8,13 @@ var userschema = new Schema({
         type: String,
         required: true,
     },
-
     user_mobilenumber: {
         type: Number,
         required: true
     },
-    createdon:{
-        type:Date,
-        default:Date.now
+    createdon: {
+        type: Date,
+        default: Date.now
     }
 });
 module.exports = mongoose.model('users', userschema);
